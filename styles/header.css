@@ -1,0 +1,48 @@
+* {
+	padding:0;
+	margin:0;
+}
+#header {
+	height:143px;
+	padding:0;
+	width:1036px;
+	margin:0 auto;
+	position:relative;
+	overflow:hidden;
+}
+#header .logo{
+	height:119px;
+	width:100%;
+}
+/*导航栏*/
+#nav {
+	background-color:#FF3333;
+	height:24px;
+	position:relative;
+	line-height:24px;
+	padding:0;
+	margin:0 auto;
+}
+#nav ul {
+	margin-left:20px;
+}
+#nav ul li {
+	float:left;
+	display:inline;
+	position:relative;
+	margin-left:15px;
+}
+#nav ul li a {
+	display:block;
+	padding:0 6px;
+	font-weight:800px;
+	font-size:16px;
+	color:#FFFFFF;
+	text-decoration:none;
+}
+#nav .hot {
+	color:#EEEE00;
+}
+#nav .new {
+	color:#EEEE00;
+}
