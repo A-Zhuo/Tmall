@@ -191,6 +191,9 @@
 	width:36px;
 	height:24px;
 }
+.buy_num {
+	text-align:center;
+}
 .buy_num_btn {
 	float:left;
 	margin-left:10px;
