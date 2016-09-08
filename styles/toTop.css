@@ -1,0 +1,12 @@
+#toTop {
+	position:fixed;
+	height:54px;
+	width:54px;
+	background:url(../images/toTop.png) 0 0;
+	right:5px;
+	bottom:100px;
+	display:none;
+}
+#toTop:hover {
+	background:url(../images/toTop.png) 0 54px;
+}
