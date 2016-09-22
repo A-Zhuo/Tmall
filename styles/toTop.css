@@ -6,6 +6,7 @@
 	right:5px;
 	bottom:100px;
 	display:none;
+	cursor:pointer;
 }
 #toTop:hover {
 	background:url(../images/toTop.png) 0 54px;
