@@ -38,9 +38,11 @@ function button() {
 }
 /*立即购买*/
 function buy() {
+	var val;
 	var buy_btn = document.getElementById("buy_now");
 	buy_btn.onclick = function() {
-		alert("购买完成");
+		val = document.getElementsByClassName("buy_num")[0].value;
+		alert("购买完成，您购买的的数量是：" + val);
 	}
 }
 /*加入购物车*/
