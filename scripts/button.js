@@ -19,7 +19,7 @@ function getElementsByClassName(node,classname)
     }  
 } 
 /*增加、减少数量按钮*/ 
-function button() {
+function num_button() {
 	var val = document.getElementsByClassName("buy_num")[0].getAttribute("value");
 	var inc = document.getElementsByClassName("btn_increase")[0];
 	var dec = document.getElementsByClassName("btn_decrease")[0];
@@ -36,24 +36,34 @@ function button() {
 		}
 	}
 }
-/*立即购买*/
-function buy() {
+/*立即购买与加入购物车*/
+function button() {
 	var val;
 	var buy_btn = document.getElementById("buy_now");
+	var add_btn = document.getElementById("add_car");
+	var oDialog = document.getElementById("dialog");
+	var oP = oDialog.getElementsByTagName("p")[0];
+	var oSpan = oDialog.getElementsByTagName("span")[0];
+	var oMask = document.getElementById("mask");
 	buy_btn.onclick = function() {
 		val = document.getElementsByClassName("buy_num")[0].value;
-		alert("购买完成，您购买的的数量是：" + val);
+		oDialog.style.display = "block";
+		oMask.style.display = "block";
+		oP.innerHTML = "感谢购买，您购买的数量为：" + val;
 	}
-}
-/*加入购物车*/
-function add() {
-	var add_btn = document.getElementById("add_car");
+	oSpan.onclick = function() {
+		oDialog.style.display = "none";
+		oMask.style.display = "none";
+	}
 	add_btn.onclick = function() {
-		alert("已成功加入购物车");
+		oDialog.style.display = "block";
+		oMask.style.display = "block";
+		oP.innerHTML = "已成功加入购物车";
 	}
 }
+window.onbeforeunload = function() {
+	var val = document.getElementsByClassName("buy_num")[0].value = 1;
+}
 
-
-addLoadEvent(buy);
-addLoadEvent(add);
+addLoadEvent(num_button);
 addLoadEvent(button);
