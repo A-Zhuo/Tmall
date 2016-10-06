@@ -49,15 +49,20 @@ function button() {
 		val = document.getElementsByClassName("buy_num")[0].value;
 		oDialog.style.display = "block";
 		oMask.style.display = "block";
+		document.body.style.height='100%';
+		document.body.style.overflow='hidden';
 		oP.innerHTML = "感谢购买，您购买的数量为：" + val;
 	}
 	oSpan.onclick = function() {
 		oDialog.style.display = "none";
 		oMask.style.display = "none";
+		document.body.style.overflow='visible';
 	}
 	add_btn.onclick = function() {
 		oDialog.style.display = "block";
 		oMask.style.display = "block";
+		document.body.style.height='100%';
+		document.body.style.overflow='hidden';
 		oP.innerHTML = "已成功加入购物车";
 	}
 }
